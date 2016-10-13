@@ -1,0 +1,23 @@
+{
+    "name": "mattmakins/ip2location",
+    "description": "PHP library for converting an ip to a country, using a local ip country database table",
+    "type": "library",
+    "version": "0.9",
+    "repositories": [        
+        {
+            "type": "vcs",
+            "url": "https://github.com/mattmakins/ip2location.git"    
+        }
+    ],    
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ip2Location\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    }
+}
