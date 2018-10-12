@@ -43,7 +43,7 @@ class Ip2Location
     
     private function dot2LongIp($ip)
     {
-        $ips = split("\.", "$ip");
+        $ips = explode("\.", "$ip");
         
         return ( (16777216 * $ips[0]) + (65536 * $ips[1]) + (256 * $ips[2]) + $ips[3] );
     }
