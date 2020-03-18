@@ -43,9 +43,12 @@ class Ip2Location
     
     private function dot2LongIp($ip)
     {
-        $ips = explode("\.", "$ip");
-        
-        return ( (16777216 * $ips[0]) + (65536 * $ips[1]) + (256 * $ips[2]) + $ips[3] );
+        if ($ip == "") {
+            return 0;
+        } else {
+            $ips = explode(".", "$ip");
+            return ($ips[3] + $ips[2] * 256 + $ips[1] * 256 * 256 + $ips[0] * 256 * 256 * 256);
+        }        
     }
     
     private function query($longIp)
